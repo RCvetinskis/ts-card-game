@@ -82,10 +82,18 @@ h1{
 }
 
 
+@media(max-width:580px){
+    .card{
+        width: 60px!important;
+        height: 60px!important;
+    }
+}
+
+
 @media(max-width:900px){
     .card{
-        width: 60px;
-        height: 60px;
+        width: 130px;
+        height: 130px;
     }
 }
 
