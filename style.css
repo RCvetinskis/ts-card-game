@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+html{
+    scroll-behavior: smooth
+}
+
+body{
+    font-family: monospace;
+    background-color: #fffffc;
+    color: #aaa;
+
+}
+h1{
+    text-align: center;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+
+}
+.star {
+    background-image:url("https://img.freepik.com/free-vector/start_53876-25533.jpg");
+   
+
+}
+.arrow {
+    background-image:url("https://thumbs.dreamstime.com/b/golden-down-arrow-d-illustration-isolated-white-background-93519869.jpg");
+  
+}
+.x {
+    background-image:url("https://thumbs.dreamstime.com/b/gold-letter-d-gold-letter-isolated-white-background-120994578.jpg");
+  
+}
+.smile {
+    background-image:url("http://atlas-content-cdn.pixelsquid.com/stock-images/gold-smile-symbol-logo-BYdv1W5-600.jpg");
+  
+}
+.gold {
+    background-image:url("https://www.pngitem.com/pimgs/m/1-11696_runescape-gold-png-transparent-png.png");
+  
+}
+.ags {
+    background-image:url("https://p.turbosquid.com/ts-thumb/mI/EcHKRQ/Hv/ags/png/1609714079/600x600/fit_q87/912c9c00eb4bb882f61e9c4c9b14b3b7233219e7/ags.jpg");
+  
+}
+.claws {
+    background-image:url("https://oldschool.runescape.wiki/images/thumb/Dragon_claws_equipped_male.png/130px-Dragon_claws_equipped_male.png?4cf64");
+  
+}
+.up {
+    background-image:url("http://atlas-content-cdn.pixelsquid.com/stock-images/symbol-arrow-up-gold-directional-188wJX8-600.jpg");
+  
+}
+.str {
+    background-image:url("https://oldschool.runescape.wiki/images/thumb/Strength_cape%28t%29_detail.png/120px-Strength_cape%28t%29_detail.png?21398");
+  
+}
+.awp {
+    background-image:url("https://www.nicepng.com/png/detail/145-1458153_cs-go-png-for-free-download-awp-counter.png");
+  
+}
+
+
+.card{
+    width: 200px;
+    height: 200px;
+    background-color: #bde0fe;
+    box-shadow: 0 0 5px 5px #a2d2ff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    border-radius: 8px;
+}
+
+
+
