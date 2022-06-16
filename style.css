@@ -84,6 +84,12 @@ h1{
 
 @media(max-width:580px){
     .card{
+        width: 100px!important;
+        height: 100px!important;
+    }
+}
+@media(max-width:360px){
+    .card{
         width: 60px!important;
         height: 60px!important;
     }
