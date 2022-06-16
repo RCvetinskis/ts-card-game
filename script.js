@@ -12,26 +12,36 @@ let cardsArray = [
     "up",
     "ags"
 ];
+//  double cardsArray 
 let iconsMerged = [...cardsArray, ...cardsArray];
+// array for selected cards
 let selected = [];
 function closeCards() {
+    // closes cards after one second
     setTimeout(() => {
+        // closes first selected card if it is not matched
         selected[0].div.style.backgroundColor = "#bde0fe";
         selected[0].div.innerHTML = "";
+        // closes second selected card if it is not matched
         selected[1].div.style.backgroundColor = "#bde0fe";
         selected[1].div.innerHTML = "";
         selected = [];
     }, 1000);
 }
 function cardsMatch() {
+    // opens cards if they match
     selected[0].div.classList.add("open");
     selected[1].div.classList.add("open");
+    // refresh array
     selected = [];
 }
 function compareSymbols() {
+    // if first selected card symbol is equil to second
     if (selected[0].symbol === selected[1].symbol) {
+        // checks if cards matches
         console.log("match");
         cardsMatch();
+        // otherwise closes cards
     }
     else {
         console.log("no match");
@@ -39,50 +49,37 @@ function compareSymbols() {
     }
 }
 function cardClicked(e) {
+    // if card is clicked checks if it includes class "open"
     if (e.target.className.includes("open"))
         return;
     if (selected.length < 2) {
+        // adds to value attribute iconName
         const { value: iconName } = e.target.attributes[1];
+        // sets blue BG
         e.target.style.backgroundColor = "#bde0fe";
+        // sets card image
         e.target.innerHTML = `  <div class="card ${iconName}" id="0"></div>`;
+        // object  for div and symbol
         const item = {
             div: e.target,
             symbol: iconName
         };
+        // pushes object to array
         selected.push(item);
+        // if two cards selected compareSymbol
         if (selected.length === 2)
             compareSymbols();
     }
 }
 function appendCards() {
+    // sorts iconsMerged randomly
     iconsMerged = iconsMerged.sort((a, b) => 0.5 - Math.random());
+    // // appends cards based on iconsMerged array
     for (let i = 0; i < iconsMerged.length; i++) {
         container.innerHTML += `  <div class="card" iconName="${iconsMerged[i]}"></div>`;
     }
+    // onclick event to select cards
     const cards = document.querySelectorAll(".card");
     cards.forEach(x => x.onclick = cardClicked);
 }
 appendCards();
-// function compareSymbols():any{
-//     if(selected[0].symbol === selected[1].symbol){
-//         console.log("math")
-//     }else{
-//         console.log("no match")
-//     }
-// }
-// function changeCardsOnClick(){
-//     const regularCard = document.querySelectorAll(".card") as NodeListOf <HTMLElement>;
-//     regularCard.forEach(x=>{
-//     x.onclick =(e:any)=>{
-//       const random = Math.round(Math.random()* cardsArray.length -1)
-//       console.log(cardsArray[random])
-//       e.target.classList.add(cardsArray[random])
-//       const item:itemInterface = {
-//         div: e.target,
-//         symbol: cardsArray[random]
-//     }
-//     // selected.push(item)
-//     compareSymbols()
-//     }
-//     }
-// })
